@@ -117,7 +117,7 @@ export default {
 
 .header_exit span {
   font-weight: 500;
-
+  transform: skew(20deg);
 
 }
 
