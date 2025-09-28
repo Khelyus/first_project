@@ -118,6 +118,7 @@ export default {
 .header_exit span {
   font-weight: 500;
 
+
 }
 
 .header_exit:hover {
