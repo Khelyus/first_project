@@ -42,7 +42,7 @@ export default {
 .header {
   display: flex;
   align-items: center;
-  background: #e75f37;
+  background: #ff5e00;
   padding: 0 1rem;
   color: #fff;
   height: 3rem;
@@ -79,7 +79,7 @@ export default {
 
     &-input {
       padding: 0.4rem 0.5rem 0.4rem 2rem;
-      background-color: #851d02;
+      background-color: #c33203;
       border: none;
       outline: none;
       width: 100%;
@@ -88,7 +88,7 @@ export default {
     }
 
     &-input::placeholder {
-      color: #b64621;
+      color: #ff3e00;
     }
   }
 

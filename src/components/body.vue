@@ -13,161 +13,312 @@
       </ul>
     </aside>
 
-  <section class="main__content content">
-    <div class="content__profile">
-      <img
-        src="../assets/main_portret.png"
-        alt="Фото"
-        class="content__photo"
-      />
-      <div class="content__info">
-        <h2 class="content__name">Иванов Иван Иванович</h2>
-        <p class="content__dates">11.12.1911 – 18.12.1988</p>
-        <p class="content__city">г. Уфа</p>
+    <section class="main__center center">
+      <div class="center__photo-block">
+        <img src="../assets/main_portret.png" alt="Фото" class="center__photo" />
       </div>
-    </div>
+
+      <div class="center__gallery gallery">
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <img src="../assets/main_portret.png" alt="Фото" />
+          </li>
+          <li class="gallery__item">
+            <img src="../assets/main_portret.png" alt="Фото" />
+          </li>
+          <li class="gallery__item">
+            <img src="../assets/main_portret.png" alt="Фото" />
+          </li>
+        </ul>
+      </div>
 
 
-    <div class="content__biography biography">
-      <h3 class="biography__title">Биография</h3>
-      <p class="biography__text">
-        Об Иванове Иване Ивановиче...
-      </p>
-    </div>
+      <div class="center__map">
+        <div class="map__header">
+          <span class="map__title">КАРТА</span>
+        </div>
+        <img src="../assets/map.png" alt="Карта" class="center__map-img" />
+      </div>
+
+      <div class="center__relatives relatives">
+        <h3 class="relatives__title">Родственники</h3>
+        <ul class="relatives__list">
+          <li class="relatives__item">
+            <img src="../assets/main_portret.png" alt="Фото" />
+          </li>
+          <li class="relatives__item">
+            <img src="../assets/main_portret.png" alt="Фото" />
+          </li>
+          <li class="relatives__item">
+            <img src="../assets/main_portret.png" alt="Фото" />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="main__right right">
+      <div class="right__info">
+        <div class="right__fio">
+          <h2 class="right__surname">Иванов</h2>
+          <h3 class="right__firstname">Иван Иванович</h3>
+        </div>
+        <div class="right__meta">
+          <p class="right__city">г. Уфа</p>
+          <p class="right__dates">11.12.1911 – 18.12.1988</p>
+        </div>
+      </div>
 
 
-    <div class="content__map">
-      <h3 class="content__map-title">Карта</h3>
-      <img
-        src="../assets/map.png"
-        alt="Карта"
-        class="content__map-img"
-      />
-    </div>
+      <div class="right__biography biography">
+        <div class="biography__header">
+          <div class="biography__label">
+            <span class="biography__label-text">БИОГРАФИЯ</span>
+          </div>
+        </div>
 
+        <div class="biography__body">
+          <p class="biography__text">
+            Ива́н Ива́нович Ивано́в (8 октября 1909, Богородский уезд, Московская губерния — 22 июня 1941, Дубно, Ровенская область) — советский военный лётчик,
+            участник Польского похода РККА, советско-финской и Великой Отечественной войн. Старший лейтенант. Герой Советского Союза (посмертно, 1941).
+            Почётный гражданин города Фрязино.
 
-    <div class="content__relatives relatives">
-      <h3 class="relatives__title">Родственники</h3>
-      <ul class="relatives__list">
-        <li class="relatives__item">
-          <img src="../assets/main_portret.png" alt="Фото" />
-        </li>
-        <li class="relatives__item">
-          <img src="../assets/main_portret.png" alt="Фото" />
-        </li>
-        <li class="relatives__item">
-          <img src="../assets/main_portret.png" alt="Фото" />
-        </li>
-      </ul>
-    </div>
-  </section>
-
-
+            В Рабоче-крестьянской Красной Армии с 1 сентября 1931 года.
+            Действительную военную службу начал в артиллерийской части в Московском военном округе.
+            По личной просьбе был направлен в военно-воздушные силы РККА.
+            Пройдя лётную подготовку, с 1934 года служил в бомбардировочной авиации.
+            Принимал участие в боевых операциях Красной Армии на Украинском (1939) и Северо-Западном (1940) фронтах.
+            После окончания Зимней войны переведён в истребительную авиацию. К июню 1941 года командовал звеном истребителей
+            И-16 46-го истребительного авиационного полка 14-й смешанной авиационной дивизии Киевского особого военного округа.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
+
 <script lang="ts">
 export default {
   name: 'AppBody',
 }
 </script>
-<style scoped lang="scss">
-  .main{
-    display: flex;
-    gap: 1.25rem;
-    padding: 1.25rem;
-    font-family: Arial, sans-serif;
-    background: #fff;
+
+<style lang="scss">
+
+body{
+  background: #f6f6f6;
+  margin: 0;
+}
+.main {
+  display: grid;
+  grid-template-columns: 220px 300px 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  font-family: Arial, sans-serif;
+  /*background: #f6f6f6;*/
+  margin-left: 11rem;
+  margin-right: 11rem;
+}
+
+.sidebar {
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: 1rem;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  .sidebar{
-    flex: 0 0 12.5rem;
+  &__item {
+    padding: 0.75rem 0;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+
+  .center__gallery {
     background: #fff;
-    border-radius: 0.625rem;
-    padding: 1.25rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
 
-    &__list{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+  .gallery__list {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
-    &__item{
-      padding: 0.625rem 0;
-      cursor: pointer;
-      border-bottom: 0.0625rem solid #ccc;
+    .gallery__item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      object-fit: cover;
     }
   }
 
-  .content{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
 
-    &__profile{
+  &__photo-block,
+  &__map,
+  &__relatives {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  &__photo {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  &__map {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0;
+
+    .map__header {
+      background: #333;
+      padding: 0.6rem 1rem;
       display: flex;
-      gap: 1.25rem;
       align-items: center;
-      background-color: #ffffff;
-      padding: 1.25rem;
-      border-radius: 0.625rem;
+
+      .map__title {
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
     }
 
-    &__photo{
-      width: 7.5rem;
-      height: 7.5rem;
+    &-img {
+      width: 100%;
+      display: block;
+      border-radius: 0 0 8px 8px;
+      object-fit: cover;
     }
+  }
+}
 
-    &__info{
-      display: flex;
-      flex-direction: column;
-      gap: 0.3125rem;
+.relatives__list {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
 
-      & .content__name{
+  .relatives__item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+}
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__info {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .right__fio {
+      text-align: left;
+
+      .right__surname {
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
       }
 
-      & .content__dates,
-      & .content__city{
+      .right__firstname {
         margin: 0;
-        color: #444444;
+        font-size: 1.4rem;
+        font-weight: normal;
+        color: #333;
+      }
+    }
+
+    .right__meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .right__city,
+      .right__dates {
+        margin: 0;
+        color: #666;
         font-size: 1rem;
       }
     }
   }
 
+  &__biography {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
 
-  .content__biography,
-  .content__map,
-  .content__relatives{
-    background-color: white;
-    padding: 1.25rem;
-  }
+    .biography__header {
+      background: #ff5e00;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      position: relative;
 
-  .content__map-img{
-    width: 100%;
-    border-radius: 0.625rem;
-  }
+      .biography__label {
+        position: relative;
+        padding: 0 2rem;
+        height: 100%;
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        z-index: 1;
 
-  .content__relatives-list{
-    display: flex;
-    gap: 0.625rem;
-    padding: 0;
-    list-style: none;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 120%;
+          height: 100%;
+          background: #333;
+          clip-path: polygon(0 0, 90% 0, 80% 100%, 0% 100%);
+          z-index: -1;
+        }
+      }
+    }
 
-    .content__item img{
-      width: 5rem;
-      height: 5rem;
+    .biography__body {
+      padding: 1rem;
+
+      .biography__text {
+        color: #444;
+        font-size: 1rem;
+        line-height: 1.4;
+        margin: 0;
+      }
     }
   }
-
-  .biography__title,
-  .content__map-title,
-  .relatives__title{
-    margin: 0 0 0.625rem 0;
-    font-size: 1.2rem;
-  }
+}
 
 
 
